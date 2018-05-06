@@ -6,8 +6,7 @@ Maven父pom项目，将pom公共部分提取出来汇总在父pom中，降低各
 -----
 * 指定各插件（plugin）的版本，基本参数（如编码）
 * 指定常用依赖的具体版本，希望通过父pom能控制所有二方和三方包的依赖，降低项目pom依赖冲突的可能性。如果需要，项目可以自己特殊指定。
-* 指定公司私有Maven仓库的地址。
-* 指定公司私有仓库的发布地址，发布需要有帐号密码。
+* 指定私有Maven仓库的地址。
 
 使用方式
 -----
@@ -19,14 +18,14 @@ Maven父pom项目，将pom公共部分提取出来汇总在父pom中，降低各
         
         <!-- 指定父pom信息 -->
         <parent>
-            <groupId>info.bbd</groupId>
-            <artifactId>common-parent</artifactId>
+            <groupId>info.soft</groupId>
+            <artifactId>public-parent</artifactId>
             <version>1.0.0</version>
         </parent>
 
         ...
 
-        <!-- 指定公司私有Maven仓库地址，以便下载父pom -->
+        <!-- 指定私有Maven仓库地址，以便下载父pom -->
         <repositories>
 	        <repository>
 		        <id>public</id>
